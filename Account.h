@@ -10,8 +10,6 @@ class Account {
 			_balance{balance} {}
 
 		double _balance;
-				//{if (balance + deposit < withdraw) {throw std::invalid_argument{"Withdraw amount is more than what is currently in the account.\n"};}; 
-				//if (deposit < 0 || withdraw < 0 ) {throw std::invalid_argument{"Error. Deposit amount or withdraw amount is negative. Give a positive value.\n"};};
 
 		void deposit(double deposit) {
 			_balance += deposit;
