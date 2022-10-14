@@ -17,5 +17,5 @@ int main() {
 	std::cin >> withdraw_input; // User enters withdraw amount
 	account.deposit(deposit_input);
 	account.withdraw(withdraw_input);
-	balance.print();
+	account.print();
 }
