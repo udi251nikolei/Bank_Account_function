@@ -9,13 +9,13 @@ int main() {
 
 	std::cout << "Enter your balance: ";
 	std::cin >> balance_input; // User enters balance amount
+	Account account{balance_input};
+	
 	std::cout << "How much do you wish to deposit: ";
 	std::cin >> deposit_input; // User enters deposit amount
 	std::cout << "How much do you wish to withdraw: ";
 	std::cin >> withdraw_input; // User enters withdraw amount
-	
-	Account balance{balance_input, deposit_input, withdraw_input};
-	balance.deposit();
-	balance.withdraw();
+	account.deposit(deposit_input);
+	account.withdraw(withdraw_input);
 	balance.print();
 }
