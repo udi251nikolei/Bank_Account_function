@@ -18,7 +18,9 @@ class Account {
 		void withdraw(double withdraw) {
 			_balance -= withdraw;
 		}
+		
+		if (_balance < 0) {throw std::invalid_argument{"Withdraw amount is more than what is currently in the account.\n"}};
 
-		void print() {if (_balance < 0) {throw std::invalid_argument{"Withdraw amount is more than what is currently in the account.\n"};}; else std::cout << "Your current balance is " << _balance << ".\n";}
+		void print() {std::cout << "Your current balance is " << _balance << ".\n";}
 };
 #endif // Account_h
