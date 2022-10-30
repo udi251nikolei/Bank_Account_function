@@ -1,4 +1,5 @@
 // class_main.cxx
+
 #include <iostream>
 #include "Account.h"
 
@@ -15,7 +16,7 @@ int main() {
 	std::cin >> deposit_input; // User enters deposit amount
 	std::cout << "How much do you wish to withdraw: ";
 	std::cin >> withdraw_input; // User enters withdraw amount
-	account.deposit(deposit_input);
-	account.withdraw(withdraw_input);
+	account.balance_deposit(deposit_input);
+	account.balance_withdraw(withdraw_input);
 	account.print();
 }
