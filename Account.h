@@ -1,26 +1,23 @@
 // Account.h
+
 #include <iostream>
-#ifdef Account_h
+#ifndef Account_h
 #define Account_h
 
 class Account {
-	public:
-		Account() = default;
-		Account(double balance) :
-			_balance{balance} {}
-
+	private:
 		double _balance;
 
-		void deposit(double deposit) {
-			_balance += deposit;
-		}
+	public:
+		Account(double balance);
 
-		void withdraw(double withdraw) {
-			_balance -= withdraw;
-		}
-		
-		if (_balance < 0) {throw std::invalid_argument{"Withdraw amount is more than what is currently in the account.\n"}};
+		int getBalance();
 
-		void print() {std::cout << "Your current balance is " << _balance << ".\n";}
+		void balance_deposit(double deposit);
+
+		void balance_withdraw(double withdraw);
+
+		void print();
 };
+
 #endif // Account_h
